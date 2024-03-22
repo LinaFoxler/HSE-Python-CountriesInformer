@@ -10,11 +10,19 @@ Install the appropriate software:
 2. [Git](https://github.com/git-guides/install-git).
 3. [PyCharm](https://www.jetbrains.com/ru-ru/pycharm/download) (optional).
 
+## Quick start
+1. `cp .env.sample .env`
+2. `docker compose up -d db`
+3. `docker compose run app python manage.py makemigrations`
+4. `docker compose run app python manage.py migrate`
+5. `docker compose run app python manage.py createsuperuser`
+6. `docker compose up --build`
+
 ## Installation
 
 Clone the repository to your computer:
 ```bash
-git clone https://github.com/mnv/python-course-portfolio.git
+git clone https://github.com/LinaFoxler/HSE-Python-CountriesInformer.git
 ```
 
 1. To configure the application copy `.env.sample` into `.env` file:
@@ -37,7 +45,7 @@ git clone https://github.com/mnv/python-course-portfolio.git
     ```shell
     docker compose up
     ```
-   When containers are up server starts at [http://0.0.0.0:8000](http://0.0.0.0:8000). You can open it in your browser.
+   When containers are up server starts at [http://0.0.0.0:8020](http://0.0.0.0:8020). You can open it in your browser.
 
 4. To run application correctly set up the database using commands:
     Connect to the application Docker-container:
